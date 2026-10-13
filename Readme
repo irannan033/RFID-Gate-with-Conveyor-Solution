@@ -1,0 +1,141 @@
+# CTU Automation Project – Custom RFID Gate Integration for Finished Goods Management
+
+## Project Overview
+
+This project focuses on integrating a **custom-built RFID passing gate developed by the Crystal R&D team** with the Carton Transfer Unit (CTU), conveyor system, and finished-goods warehouse operations in a garment manufacturing facility.
+
+The RFID gate automatically reads RFID information stored in garment hangtags attached to individual items inside a box. As a box passes through the gate, the system captures item-level information, including **style, color, size, country, and other relevant product attributes**.
+
+The RFID gate is integrated with the outbound conveyor and customer database to update shipment-related information after scanning. Combined with automated CTU transportation and warehouse storage, the system supports real-time finished-goods visibility, inventory monitoring, and shipment preparation.
+
+## Project Objectives
+
+- Automate finished-goods transportation between the production output, warehouse, and outbound shipment areas.
+- Identify garment items through RFID-enabled hangtags without manually checking each item.
+- Capture product information, including style, color, size, and country.
+- Integrate RFID scanning with conveyor operations and customer database updates.
+- Automate inbound collection and storage of finished-goods boxes using CTUs.
+- Automate outbound retrieval of finished-goods boxes based on shipment job sequences.
+- Improve finished-goods traceability and real-time inventory visibility.
+
+## System Architecture
+
+The solution combines the following components:
+
+- **Custom RFID Passing Gate:** Developed by the Crystal R&D team to scan RFID hangtags on garments passing through the gate.
+- **RFID Hangtags:** Store item-level product information used for identification and tracking.
+- **Conveyor System:** Transfers boxes through the RFID gate during outbound shipment processing.
+- **Carton Transfer Unit (CTU):** Autonomously transports finished-goods boxes between transfer points and warehouse storage locations.
+- **Laser Sensor:** Detects incoming boxes or bins and triggers automatic task generation.
+- **Finished-Goods Warehouse:** Designated storage area for finished-goods boxes awaiting shipment.
+- **Task Management and Job Sequence:** Coordinates automated CTU pickup, transportation, storage, and shipment preparation.
+- **Customer Database Integration:** Receives shipment-related updates after RFID scanning.
+
+## Operational Workflow
+
+### 1. Inbound Finished-Goods Collection and Storage
+
+The inbound process automatically transfers finished-goods boxes or bins into the warehouse.
+
+1. A finished-goods box or bin becomes ready at the designated inbound point.
+2. The box or bin passes through a laser sensor, which detects its presence.
+3. The system automatically generates a transportation task.
+4. A CTU receives the task and travels to the designated pickup point.
+5. The CTU picks up the box or bin and transports it to the finished-goods warehouse area.
+6. The box is placed in its designated storage location and becomes available for subsequent shipment processing.
+
+**Objective:** Reduce manual material handling and automate the movement of finished goods from the inbound transfer point to warehouse storage.
+
+### 2. Outbound Shipment Preparation and RFID Scanning
+
+When finished goods are required for shipment, the outbound process automatically retrieves the corresponding box from the warehouse.
+
+1. A shipment requirement triggers task generation according to the configured job sequence.
+2. The CTU receives the task and travels to the relevant finished-goods storage location.
+3. The CTU retrieves the required box and transports it to the outbound conveyor.
+4. The CTU places the box onto the conveyor, initiating the conveyor transfer sequence.
+5. The conveyor moves the box through the custom-built RFID passing gate.
+6. The RFID gate scans the hangtags attached to the garments inside the box.
+7. The system captures available item-level information, including style, color, size, country, and other encoded attributes.
+8. After the RFID scanning process, the shipment-related status is updated in the customer database.
+9. The scanned box proceeds through the outbound process and becomes ready for shipment.
+
+**Objective:** Automate box retrieval, item identification, shipment information updates, and outbound material flow.
+
+### 3. RFID-Based Item Identification and Traceability
+
+Each garment carries an RFID-enabled hangtag containing product identification information. When the box passes through the RFID gate, the system reads the available tag data and uses it to identify the garments associated with the shipment.
+
+This enables:
+
+- Automated garment identification.
+- Collection of item-level product information.
+- RFID-based verification and shipment traceability.
+- Integration of scanned information with customer database records.
+- Improved visibility of finished-goods processing and shipment readiness.
+
+Actual scanning accuracy and item-read completeness depend on the RFID tag configuration, gate performance, and the validation rules implemented in the system.
+
+## End-to-End Process Flow
+
+**Inbound:**
+
+Finished-goods box/bin ready → Laser sensor detection → Automatic task generation → CTU pickup → Transportation → Finished-goods warehouse storage
+
+**Outbound:**
+
+Shipment requirement → Job-sequence-based task generation → CTU retrieves box → Outbound conveyor → RFID gate scanning → Customer database status update → Shipment-ready goods
+
+## My Role and Responsibilities
+
+As part of the Manufacturing Excellence (ME) team, my involvement in this project includes supporting the implementation and integration of CTU-based finished-goods automation.
+
+Key responsibilities include:
+
+- Supporting project planning and implementation for CTU and RFID gate integration.
+- Coordinating with internal teams and suppliers on automation requirements.
+- Supporting the integration of CTU transportation, conveyor operation, and RFID scanning workflows.
+- Coordinating technical requirements for automatic task generation and job-sequence-based material movement.
+- Supporting operational testing and validation of inbound and outbound processes.
+- Contributing to finished-goods traceability and warehouse process digitalization.
+
+## Expected Benefits
+
+- **Automated material handling:** Reduces reliance on manual transportation between designated process areas.
+- **Improved product visibility:** Enables identification of garments through RFID-enabled hangtags.
+- **Faster shipment processing:** Integrates warehouse retrieval, conveyor movement, and RFID scanning into a coordinated workflow.
+- **Better traceability:** Connects scanned garment information with shipment-related database records.
+- **Real-time status monitoring:** Supports visibility of finished-goods processing and shipment readiness through integrated system updates.
+- **Scalable automation:** Establishes a foundation for expanding CTU-based warehouse operations and RFID-enabled logistics.
+
+## Technology and Application Areas
+
+- **Domain:** Smart Manufacturing and Industrial Automation
+- **Application:** Finished-Goods Intralogistics and Shipment Management
+- **Automation:** Carton Transfer Unit (CTU)
+- **Identification Technology:** RFID and garment hangtags
+- **Material Handling:** Conveyor automation
+- **Detection:** Laser sensor-based box detection
+- **System Integration:** Task management, job sequencing, and customer database updates
+- **R&D Contribution:** Custom-built RFID passing gate developed by the Crystal R&D team
+
+## Future Development Opportunities
+
+Potential future improvements include:
+
+- Integration with an intelligent Warehouse Management System (iWMS).
+- Automated stock-in, stock-out, and shipment reconciliation.
+- Real-time dashboard monitoring of warehouse inventory and shipment status.
+- RFID scan completeness and mismatch reporting.
+- Improved coordination between CTU task scheduling and shipment priorities.
+- Expansion of automated finished-goods handling to additional production and warehouse areas.
+
+## Conclusion
+
+The CTU and custom RFID gate integration project combines autonomous transportation, conveyor automation, RFID-based garment identification, and customer database updates into a connected finished-goods handling workflow.
+
+By automating inbound warehouse storage and outbound shipment preparation, the project supports the transition toward **smart intralogistics, digital finished-goods traceability, and real-time shipment status visibility** in garment manufacturing.
+
+---
+
+*Project domain: Manufacturing Excellence | Industrial Automation | Smart Factory | RFID-Based Finished-Goods Management*
